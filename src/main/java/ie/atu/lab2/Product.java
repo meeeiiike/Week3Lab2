@@ -7,11 +7,12 @@ public class Product {
     private String name;
     private double price;
 
-    List<Product> productList;
-
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
+    }
+
+    public Product() {
     }
 
     public String getName() {

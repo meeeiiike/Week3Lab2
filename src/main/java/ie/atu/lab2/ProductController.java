@@ -12,6 +12,7 @@ public class ProductController {
 
     @GetMapping("/viewAllProducts")
     public List<Product> viewAllProducts(){
+
         return productList;
     }
 
@@ -20,4 +21,11 @@ public class ProductController {
         productList.add(product);
         return product;
     }
+
+    @PostMapping("/addProducts")
+    public List<Product> addProducts(@RequestBody List<Product> products){
+        productList.addAll(products);
+        return productList;
+    }
+
 }
